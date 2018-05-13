@@ -14,7 +14,7 @@ Whether you work in an organization that uses test-driven development or in an o
 
 You can see all feeds in index.html. You can find Jasmin testing results at the bottom of the page.
 
-### You Can visit the index.html page by [clicking here].
+### You Can visit the index.html page by [clicking here](https://iseitah.github.io/FeedReader/).
 
 
 ##Testing parts:
