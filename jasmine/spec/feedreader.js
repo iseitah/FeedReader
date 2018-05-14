@@ -27,7 +27,7 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
+        /* Test loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
@@ -38,7 +38,7 @@ $(function() {
             });
         });
 
-        /* TODO: Write a test that loops through each feed
+        /* Test loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
@@ -51,9 +51,8 @@ $(function() {
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
 
-        /* TODO: Write a test that ensures the menu element is
+        /* Ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
@@ -66,7 +65,7 @@ $(function() {
                 expect($(body).hasClass('menu-hidden')).toBe(true);
             });
 
-         /* TODO: Write a test that ensures the menu changes
+         /* Ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
@@ -82,9 +81,9 @@ $(function() {
         });
             });
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+    /* Test suite named "Initial Entries" */
         describe('Initial Entries', function(){
-        /* TODO: Write a test that ensures when the loadFeed
+        /* Ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
@@ -100,27 +99,25 @@ $(function() {
         });
 
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+    /* Test suite named "New Feed Selection" */
         describe('New Feed Selection', function(){
-        /* TODO: Write a test that ensures when a new feed is loaded
+        /* Ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-
-         it('Ensures when a new feed is loaded by the loadFeed function that the content actually changes.', function(){
             var newFeed;
             var oldFeed;
             
             beforeEach(function(done){
                 loadFeed(0 , function(){
-                    oldFeed = $('.feed .entry > h2').HTML();
+                    oldFeed = $('.feed .entry > h2').html();
                     done();
                 });
             });
 
             beforeEach(function(done){
                 loadFeed(1 , function(){
-                    newFeed = $('.feed .entry > h2').HTML();
+                    newFeed = $('.feed .entry > h2').html();
                     done(); 
                 });
             });
@@ -128,6 +125,5 @@ $(function() {
             it('A new feed is loaded', function(){
                 expect(newFeed).not.toEqual(oldFeed);
             });   
-         });
         });
 }());
